@@ -10,9 +10,9 @@
 		3DE56C26285F40E1000CCDFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE56C25285F40E1000CCDFD /* AppDelegate.swift */; };
 		3DE56C28285F40E1000CCDFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE56C27285F40E1000CCDFD /* SceneDelegate.swift */; };
 		3DE56C2A285F40E1000CCDFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE56C29285F40E1000CCDFD /* ViewController.swift */; };
-		3DE56C2D285F40E1000CCDFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE56C2B285F40E1000CCDFD /* Main.storyboard */; };
 		3DE56C2F285F40E3000CCDFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE56C2E285F40E3000CCDFD /* Assets.xcassets */; };
 		3DE56C32285F40E3000CCDFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE56C30285F40E3000CCDFD /* LaunchScreen.storyboard */; };
+		3DE56C44285F477D000CCDFD /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE56C43285F477D000CCDFD /* Root.storyboard */; };
 		9027A69C2CD567ACED77ACE7 /* Pods_MemoAppFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B2057C6537199CAC24FF95 /* Pods_MemoAppFirebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,10 +22,10 @@
 		3DE56C25285F40E1000CCDFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE56C27285F40E1000CCDFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3DE56C29285F40E1000CCDFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3DE56C2C285F40E1000CCDFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DE56C2E285F40E3000CCDFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DE56C31285F40E3000CCDFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DE56C33285F40E3000CCDFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE56C43285F477D000CCDFD /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		D8B2057C6537199CAC24FF95 /* Pods_MemoAppFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoAppFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEE11CB1FBF7406C541E226 /* Pods-MemoAppFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoAppFirebase.release.xcconfig"; path = "Target Support Files/Pods-MemoAppFirebase/Pods-MemoAppFirebase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,15 +63,31 @@
 		3DE56C24285F40E1000CCDFD /* MemoAppFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				3DE56C40285F4757000CCDFD /* Controllers */,
+				3DE56C3F285F474B000CCDFD /* Storyborads */,
 				3DE56C25285F40E1000CCDFD /* AppDelegate.swift */,
 				3DE56C27285F40E1000CCDFD /* SceneDelegate.swift */,
-				3DE56C29285F40E1000CCDFD /* ViewController.swift */,
-				3DE56C2B285F40E1000CCDFD /* Main.storyboard */,
 				3DE56C2E285F40E3000CCDFD /* Assets.xcassets */,
 				3DE56C30285F40E3000CCDFD /* LaunchScreen.storyboard */,
 				3DE56C33285F40E3000CCDFD /* Info.plist */,
 			);
 			path = MemoAppFirebase;
+			sourceTree = "<group>";
+		};
+		3DE56C3F285F474B000CCDFD /* Storyborads */ = {
+			isa = PBXGroup;
+			children = (
+				3DE56C43285F477D000CCDFD /* Root.storyboard */,
+			);
+			path = Storyborads;
+			sourceTree = "<group>";
+		};
+		3DE56C40285F4757000CCDFD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3DE56C29285F40E1000CCDFD /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		527182EFEF19E63520C30106 /* Frameworks */ = {
@@ -88,7 +104,6 @@
 				0D9F8DC8A35F85EB4E682EB7 /* Pods-MemoAppFirebase.debug.xcconfig */,
 				DEEE11CB1FBF7406C541E226 /* Pods-MemoAppFirebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,7 +168,7 @@
 			files = (
 				3DE56C32285F40E3000CCDFD /* LaunchScreen.storyboard in Resources */,
 				3DE56C2F285F40E3000CCDFD /* Assets.xcassets in Resources */,
-				3DE56C2D285F40E1000CCDFD /* Main.storyboard in Resources */,
+				3DE56C44285F477D000CCDFD /* Root.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,14 +213,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3DE56C2B285F40E1000CCDFD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DE56C2C285F40E1000CCDFD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3DE56C30285F40E3000CCDFD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -344,7 +351,7 @@
 				INFOPLIST_FILE = MemoAppFirebase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Root;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -373,7 +380,7 @@
 				INFOPLIST_FILE = MemoAppFirebase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Root;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
