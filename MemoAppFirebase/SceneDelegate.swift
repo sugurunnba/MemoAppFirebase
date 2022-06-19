@@ -20,10 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
         //        初期起動したい画面名を設定
                 let storyborad = UIStoryboard(name: "Root", bundle: nil)
-        //        ViewControllerのidentifiarを設定する。instantiateViewControllerでviewControllerのインスタンスを取得する。
-                let homeViewController = storyborad.instantiateViewController(withIdentifier: "ViewController")
+        //        RootNavigationControllerのidentifiarを設定する。instantiateViewControllerでRootNavigationControllerのインスタンスを取得する。
+                let rootNavigationController = storyborad.instantiateViewController(withIdentifier: "RootNavigationController")
                 
-                window.rootViewController = homeViewController
+                window.rootViewController = rootNavigationController
                 
                 guard let _ = (scene as? UIWindowScene) else { return }
     }

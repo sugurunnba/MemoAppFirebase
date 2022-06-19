@@ -1,3 +1,4 @@
+
 //
 //  ViewController.swift
 //  MemoAppFirebase
@@ -13,7 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+        
+    
+    @IBAction func addButton(_ sender: Any) {
+        print("addButton")
+        let storyboard = UIStoryboard(name: "AddMemo", bundle: nil)
+        let addMemoViewController = storyboard.instantiateViewController(identifier: "AddNavigationController") as! UINavigationController
+        self.present(addMemoViewController, animated: true)
+    }
+    
 
 }
 

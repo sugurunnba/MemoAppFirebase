@@ -30,7 +30,13 @@
                             <constraint firstItem="4EC-Vp-Imb" firstAttribute="centerX" secondItem="3Sg-Lf-ucI" secondAttribute="centerX" id="ymN-0I-Ljk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="メモアプリ" id="uko-QQ-zbi"/>
+                    <navigationItem key="navigationItem" title="メモアプリ" id="uko-QQ-zbi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iW1-HA-H0H">
+                            <connections>
+                                <action selector="addButton:" destination="sli-99-cR4" id="mS3-Tc-xS9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AI-Sm-jwY" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,11 +45,15 @@
         <!--Navigation Controller-->
         <scene sceneID="SeQ-Db-gVm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bkx-Oa-VAF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="bkx-Oa-VAF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="opK-QS-9b9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.22111432249999999" green="0.98768287899999996" blue="0.25985687600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
