@@ -24,6 +24,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg9-fe-EUj">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,7 +37,9 @@
                             <constraint firstItem="vyQ-pz-FEU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="W7d-C1-Jo3"/>
                             <constraint firstItem="vyQ-pz-FEU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="avN-NR-LeP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vyQ-pz-FEU" secondAttribute="trailing" constant="30" id="dTo-0b-Kga"/>
+                            <constraint firstItem="bg9-fe-EUj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="dro-TX-qBP"/>
                             <constraint firstItem="vyQ-pz-FEU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="nD7-qU-GgB"/>
+                            <constraint firstItem="bg9-fe-EUj" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="yxv-Oa-WNJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="遷移成功！！" id="KrZ-HV-xcg">
@@ -40,10 +48,19 @@
                                 <action selector="cancelButton:" destination="Y6W-OH-hqX" id="sMu-3J-NwY"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="GST-1v-O5C"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="GST-1v-O5C">
+                            <connections>
+                                <segue destination="3bq-kG-msg" kind="unwind" unwindAction="pushSaveButtonWithSender:" id="ClH-4L-1tg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="inputText" destination="vyQ-pz-FEU" id="QXo-iy-VPM"/>
+                        <outlet property="textLabel" destination="bg9-fe-EUj" id="yn0-gJ-duD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3bq-kG-msg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="65.625"/>
         </scene>

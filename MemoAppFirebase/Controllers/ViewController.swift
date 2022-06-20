@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var textLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func pushSaveButton(sender: UIStoryboardSegue){
+        guard let senderVC = sender.source as? AddMemoViewController, let text:String = senderVC.textLabel.text else { return }
+        self.textLabel.text = text
+//        self.textLabel.text = senderVC.one    
     }
         
     
