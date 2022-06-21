@@ -7,13 +7,35 @@
 //
 
 import UIKit
+import Firebase
+
+struct Memos {
+    var text: String
+}
 
 class ViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        var memos: [Memos] = []
+
+//        Firebaseからデータを取得
+        Firestore.firestore().collection("memos").document("zd2Tz3C1yJhfAB3upyBT").getDocument { (snap, err) in
+            if let err = err {
+                fatalError("\(err)")
+            }
+            guard let data = snap?.data() else { return }
+            print(data)
+        }
+        
+//        memosコレクションに新しくランダムなUIDをキーとしたドキュメントを作成するコード(追加)
+        Firestore.firestore().collection("memos").document().setData(
+            [
+                "text": "テスト1"
+            ])
+
     }
     
     @IBAction func pushSaveButton(sender: UIStoryboardSegue){
